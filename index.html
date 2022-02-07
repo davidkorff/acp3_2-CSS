@@ -1,0 +1,1717 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"4950ec9d2d",applicationID:"29973153"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+
+		<title>Product Viewer</title>
+
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/style.min.css" />
+
+		<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+				<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://raw.githubusercontent.com/davidkorff/acp3_2-CSS/master/acp3_2.css" />
+
+		<!-- JS -->
+
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+		<script src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/js/d3.min.js"></script>
+		<script src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/js/d3.layout.cloud.js"></script>
+
+		<script src="//legacy.custom-gateway.net/public-local-tmp/cache/js/4c2c8099ba2dbb1883998fbf98507e59927e975b.js"></script>
+		<script async="async" type="text/javascript" src="//cdn.mouseflow.com/projects/d1f7c51d-c326-4189-8feb-e7bdf7c651a3.js" async="true"></script>
+
+		<script>
+	// Support for <IE11
+	if (!window.location.origin) {
+		window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+	}
+
+	function doesBrowserSupportWebGL() {
+		try {
+			var canvas = document.createElement('canvas');
+
+			return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+		} catch(e) {
+			return false;
+		}
+	}
+
+	function processFragments() {
+		return location.hash.substr(1).split('&').map(function(p) {
+			var parts = p.split('=');
+
+			// HACK: Firefox decodes the hash contents so its possible to end
+			// up with more than 2 parts if the value legitimately has a = character
+			// in it (i.e. ep3dUrl)
+			if(parts.length > 2) {
+				parts = [ parts[0], parts.slice(1).join('=') ];
+			}
+
+			if(parts.length === 2) {
+				return { key: parts[0], value: decodeURIComponent(parts[1])}
+			} else {
+				return false;
+			}
+		});
+	}
+
+	function getSettings() {
+		return {"sys.js.product-viewer":"3.3.3.0-min","sys.js.canvas-renderer":"3.2.12.0","sys.js.webgl-renderer":"3.1.0.0-dev15-min","sys.js.html-renderer":"0.0.3-min","sys.js.svg-renderer":"0.0.1-min","sys.js.null-renderer":"0.0.1-min","sys.debug":false,"sys.default-renderer.2d":"2d-canvas","sys.default-renderer.3d":"flash","sys.fb.app-key":"560414277353261","sys.g+.client-id":"731266911348-2b4ngmpi33vdo779gvp5n616okjeojka.apps.googleusercontent.com","sys.g+.api-key":"AIzaSyAVVBlfQdA6DVX7T0-JnO53AID1TeQr_ck","defaults.no-ui.enabled":false,"defaults.add-to-cart.enabled":true,"defaults.save-sample.enabled":false,"defaults.email-share.enabled":false,"defaults.products.enabled":false,"defaults.help.enabled":"0","defaults.simple-quantity.enabled":false,"defaults.grouped-quantity.enabled":false,"defaults.variant-quantity.enabled":false,"defaults.quantity-popup.enabled":false,"defaults.pos-details-popup.enabled":false,"defaults.dnd.enabled":false,"defaults.gallery-list-view.enabled":false,"defaults.save-sample-create-print-job.enabled":false,"defaults.enquiry.enabled":false,"defaults.auto-load-first-gallery-image.enabled":false,"defaults.colour-areas-as-tabs.enabled":false,"defaults.persist-state-between-products.enabled":false,"defaults.link-gallery-to-image-area.enabled":false,"defaults.html5-safe-product-search.enabled":false,"defaults.image-fill-validation.enabled":false,"defaults.image-populated-validation.enabled":false,"defaults.product-search.enabled":false,"defaults.product-extra-info.enabled":false,"defaults.product-textual-list.enabled":false,"defaults.pricing-summary.enabled":false,"defaults.image-area-effects.enabled":false,"defaults.text-area-effects.enabled":false,"defaults.dynamic-pricing.enabled":false,"defaults.image-colour-detection.enabled":false,"defaults.image-resize-warning.enabled":false,"defaults.remove-green-screen.enabled":false,"defaults.collage-mode":"0","defaults.image-overlay-mode":"1","defaults.default-country-pos":"","defaults.load-at-first-text-area.enabled":false,"defaults.fill-patterns.enabled":false,"defaults.image-upload-auto-downscale.enabled":false,"defaults.image-upload-auto-downscale.width":"1500","defaults.image-upload-auto-downscale.height":"1500","defaults.image-upload-auto-downscale.format":"image\/jpeg","defaults.image-upload-auto-downscale.quality":"0.95","defaults.include-copyright-warning.enabled":false,"defaults.colour-area-spectrum.enabled":false,"defaults.text-area-spectrum.enabled":false,"defaults.remove-background.enabled":true,"defaults.pixlr.enabled":false,"defaults.html-overlay-controls.enabled":true,"defaults.3d-preview.enabled":true,"defaults.tab-order":"2d-views,textures,aspects,text,image,colour,effects,attributes,sizes","defaults.style":"standard","defaults.a2c-terms":"","defaults.product-info-price.enabled":false,"defaults.product-info-name.enabled":false,"defaults.product-info-description.enabled":false,"defaults.setup-total-price.enabled":false,"defaults.help-text":"","defaults.surface-area-boundaries.enabled":true,"defaults.external-css":"https:\/\/raw.githubusercontent.com\/davidkorff\/acp3_2-CSS\/master\/acp3_2.css","defaults.stock-availability-check.enabled":false,"defaults.image-upload-allowed-extensions":"","defaults.upload.enabled":false,"defaults.qr-upload.enabled":false,"defaults.facebook-upload.enabled":false,"defaults.instagram-upload.enabled":false,"defaults.g-plus-upload.enabled":false,"defaults.g-drive-upload.enabled":false,"defaults.one-drive-upload.enabled":false,"defaults.dropbox-upload.enabled":false,"defaults.flickr-upload.enabled":false,"defaults.fotolia-upload.enabled":false,"defaults.pixabay-upload.enabled":false,"defaults.dreamstime-upload.enabled":false,"defaults.native-app-framework-normal-upload.enabled":false,"defaults.native-app-framework-stripped-upload.enabled":false,"defaults.live-chat-url":"","defaults.direct-smile-preview-url":"","defaults.only-show-areas-for-selected-view.enabled":false,"defaults.pos-shipping-country":"","defaults.pos-validation.enabled":false,"defaults.print-job-number-of-thumbnails":"-1","defaults.print-job-thumbnail-size":"500","defaults.print-job-thumbnail-type":"image\/png","defaults.user-image-api-v3-processor":"standard","defaults.implicit-user-image-gallery.enabled":false,"defaults.persist-implicit-user-image-gallery.enabled":false,"defaults.automatic-social-logout.enabled":false,"defaults.plain-branded-attribute-name":"","defaults.bad-word-set":"","defaults.save-state.enabled":false,"defaults.eager-aspect-loading.enabled":false,"defaults.mobile-responsive.enabled":true,"defaults.text-alignment.enabled":false,"defaults.is-auto-save.enabled":false,"defaults.google-analytics":"","defaults.mouseflow":"","sys.force-fragment-style-url":false,"sys.iframe-resize-event.enabled":true,"sys.multi-renderer":true};
+	}
+
+	function getParameters() {
+		return {"l":"acp3_2","c":"sclq26dy5kf1ngn","lo":"en_SWAGR","p":"7429","guid":"0","g":"","uid":"0","pc":"","s":"http:\/\/127.0.0.1\/ep3d_site\/httpdocs\/ep\/","af":"amf","ns":"\/\/legacy.custom-gateway.net\/acp\/api\/p\/1","sp":"1","r":"flash"};
+	}
+
+	function getI18N() {
+		return {"Aspects":"Style","3D Preview":"3D Preview","Add Effects":"Add Effects","Add Image":"Add Image","Add Images":"Add Images","Add Text":"Add Text","Add to Cart":"Add to Cart","Add your image":"Add your image","Address 1":"Address 1","Address 2":"Address 2","Align Center":"Align Center","Align Left":"Align Left","Align Right":"Align Right","Animated GIF":"Animated GIF","Animated MPEG":"Animated MPEG","Animation Options":"Animation Options","Any notes?:":"Any notes?:","Approval needed":"Approval needed","Approve":"Approve","Attributes":"Attributes","Base Price":"Base Price","Bend Text":"Bend Text","By clicking the approval button, I agree that spelling, content and layout are correct. I understand that my document will print exactly as it appears above and that I cannot make any changes once my order has been placed.":"By clicking the approval button, I agree that spelling, content and layout are correct. I understand that my document will print exactly as it appears above and that I cannot make any changes once my order has been placed.","Cancel":"Cancel","Change Product":"Change Product","Choose Quantity":"Choose Quantity","Click a point on your image to remove similar colours from around that point.":"Click a point on your image to remove similar colours from around that point.","Close":"Close","Colour":"Colour","Computer":"Computer","Copyright Permission":"Copyright Permission","Country":"Country","Create Collage":"Create Collage","Custom":"Custom","Drag and drop your images onto your item":"Drag and drop your images onto your item","Drag with your mouse to rotate":"Drag with your mouse to rotate","Dreamstime":"Dreamstime","Dropbox":"Dropbox","Dynamic Designs":"Dynamic Designs","Edit Image":"Edit Image","Email":"Email","Enquiry":"Enquiry","Enter your words":"Enter your words","Extra Small":"Extra Small","Facebook":"Facebook","Fill Colour":"Fill Colour","Flickr":"Flickr","Fotolia":"Fotolia","Full Preview":"Full Preview","Give your sample a name:":"Give your sample a name:","Go Back":"Go Back","Google Drive":"Google Drive","Google Plus":"Google Plus","I Don't Mind":"I Don't Mind","I confirm that I am the copyright owner of any uploaded images.":"I confirm that I am the copyright owner of any uploaded images.","I have read the statement above and approve.":"I have read the statement above and approve.","If you choose to proceed your finished product may look a little blurred":"If you choose to proceed your finished product may look a little blurred","If you don't have a QR reader installed, then we recommend \"Quick Scan\" which can be downloaded from either the App Store or Google Play.":"If you don't have a QR reader installed, then we recommend \"Quick Scan\" which can be downloaded from either the App Store or Google Play.","Image Colours":"Image Colours","Image Editor":"Image Editor","Image Gallery":"Image Gallery","Image Options":"Image Options","Image Quality Warning":"Image Quality Warning","Increasing or decreasing the size of your image may reduce quality":"Increasing or decreasing the size of your image may reduce quality","Instagram":"Instagram","Landscape 1x1":"Landscape 1x1","Landscape 2x1":"Landscape 2x1","Large":"Large","Load More":"Load More","Loading":"Loading","Loading Font":"Loading Font","Max characters":"Max characters","Max lines":"Max lines","Medium":"Medium","More":"More","Move Down":"Move Down","Move Left":"Move Left","Move Right":"Move Right","Move Up":"Move Up","Name":"Name","Need Help?":"Need Help?","Next":"Next","OK":"OK","Ok":"Ok","One Drive":"One Drive","One or more of your images don't fill the printable area.":"One or more of your images don't fill the printable area.","Online proof approval":"Online proof approval","Only the following image types are allowed:":"Only the following image types are allowed:","Open":"Open","Order Details":"Order Details","Outline Colour":"Outline Colour","PDF Options":"PDF Options","Pages":"Pages","Pixabay":"Pixabay","Pixlr":"Pixlr","Please click OK to proceed with your order":"Please click OK to proceed with your order","Please indicate that you approve this design.":"Please indicate that you approve this design.","Please scan the below QR code using a QR reader app on your device.":"Please scan the below QR code using a QR reader app on your device.","Please select an album:":"Please select an album:","Please select an image:":"Please select an image:","Please upload your images (maximum of 50 images).":"Please upload your images (maximum of 50 images).","Portrait 1x2":"Portrait 1x2","Portrait 2x2":"Portrait 2x2","Portrait 2x3":"Portrait 2x3","Postcode":"Postcode","Previous":"Previous","Print Areas":"Print Areas","Proceed Anyway":"Proceed Anyway","Product Background":"Product Background","QR Scan":"QR Scan","Region":"Region","Remove Background":"Remove Background","Reset":"Reset","Reset Image":"Reset Image","Reset Position":"Reset Position","Reset Rotation":"Reset Rotation","Reset Zoom":"Reset Zoom","Rotate Left":"Rotate Left","Rotate Right":"Rotate Right","Save":"Save","Save Sample":"Save Sample","Saving":"Saving","Saving a sample may take several minutes depending on how many output options have been selected. Please be patient.":"Saving a sample may take several minutes depending on how many output options have been selected. Please be patient.","Select Colour":"Select Colour","Select your image":"Select your image","Send":"Send","Send an Enquiry":"Send an Enquiry","Send to:":"Send to:","Setup":"Setup","Share via Email":"Share via Email","Shuffle":"Shuffle","Size":"Size","Small":"Small","Sorry, this product is currently out of stock":"Sorry, this product is currently out of stock","Stitches":"Stitches","Telephone":"Telephone","Textures":"Textures","This window will close automatically once you have uploaded an image using your mobile device.":"This window will close automatically once you have uploaded an image using your mobile device.","Thumbnail":"Thumbnail","Tolerance":"Tolerance","Total":"Total","Town\/City":"Town\/City","Upload":"Upload","Upload Another":"Upload Another","Upload via QR":"Upload via QR","Uploading":"Uploading","Uploading: %s images remaining.":"Uploading: %s images remaining.","Validation":"Validation","Views":"Views","Where would you like to add an image from?":"Where would you like to add an image from?","Word Cloud":"Word Cloud","You have not uploaded an image to all of the available areas.":"You have not uploaded an image to all of the available areas.","You must order at least %s item(s)":"You must order at least %s item(s)","Your enquiry has been sent":"Your enquiry has been sent","Your image does not meet the recommended minimum size of $1x$2px":"Your image does not meet the recommended minimum size of $1x$2px","Your image has too many colours. Please try uploading an image with fewer colours.":"Your image has too many colours. Please try uploading an image with fewer colours.","Your sample has been saved":"Your sample has been saved","Your sample has been sent":"Your sample has been sent","Zoom In":"Zoom In","Zoom Out":"Zoom Out"};
+	}
+
+	function getReqs(settings, parameters) {
+		var reqs = [ 'Layout', 'ProductViewer' ];
+
+		if(settings['sys.multi-renderer'] && (!parameters.r || parameters.r === 'multi')) {
+			reqs.push(doesBrowserSupportWebGL() ? 'ProductViewerWebGLRenderer' : null);
+			reqs.push('ProductViewer2DCanvasRenderer');
+
+					} else if(settings['sys.multi-renderer'] && parameters.r) {
+			switch(parameters.r) {
+				case 'webgl':
+					reqs.push('ProductViewerWebGLRenderer');
+					reqs.push(null);
+
+										break;
+
+				case '2d-canvas':
+					reqs.push(null);
+					reqs.push('ProductViewer2DCanvasRenderer');
+					break;
+
+				case 'html':
+					reqs.push(null);
+					reqs.push('ProductViewerHtmlRenderer');
+					break;
+
+				case 'svg':
+					reqs.push(null);
+					reqs.push('ProductViewerSvgRenderer');
+					reqs.push('Snap');
+					break;
+
+				case 'none':
+					reqs.push('ProductViewerNullRenderer');
+					reqs.push('ProductViewerNullRenderer');
+					break;
+
+				case 'flash':
+				default:
+					reqs.push(null, null);
+					break;
+			}
+		} else {
+			switch(parameters.r) {
+				case 'webgl':
+										reqs.push('ProductViewerWebGLRenderer');
+										break;
+
+				case '2d-canvas':
+					reqs.push('ProductViewer2DCanvasRenderer');
+					break;
+
+				case 'html':
+					reqs.push('ProductViewerHtmlRenderer');
+					break;
+
+				case 'svg':
+					reqs.push('ProductViewerSvgRenderer', 'Snap');
+					break;
+
+				case 'none':
+					reqs.push('ProductViewerNullRenderer');
+					break;
+
+				case 'flash':
+				default:
+					// do nothing
+					break;
+			}
+		}
+
+		return reqs;
+	}
+
+	(function() {
+		$('body').mask("Loading");
+
+		var settings = getSettings();
+
+		var parameters = getParameters();
+		parameters.r = parameters.r || (settings['sys.multi-renderer'] ? '' : 'flash');
+
+		var fragments = processFragments();
+
+		for(var i = 0; i < fragments.length; i++) {
+			if(fragments[i]) {
+				parameters[fragments[i].key] = fragments[i].value;
+			}
+		}
+
+		if(settings['sys.force-renderer']) {
+			parameters.r = settings['sys.force-renderer'];
+		}
+
+		if(parameters['mei'] && parameters['meo'] && settings['sys.iframe-resize-event.enabled']) {
+			var sWidth = 0;
+			var sHeight = 0;
+
+			var update = (function() {
+				var _sWidth = $('body')[0].scrollWidth;
+				var _sHeight = $('body')[0].scrollHeight;
+
+				if(_sWidth != sWidth || _sHeight != sHeight) {
+					sWidth = _sWidth;
+					sHeight = _sHeight;
+
+					try {
+						window.top.postMessage({
+							name: 'IFRAME_RESIZE',
+							id: parameters['mei'],
+
+							body: {
+								width: sWidth,
+								height: sHeight
+							}
+						}, parameters['meo']);
+					} catch (e) {
+						console.error(e);
+					}
+				}
+
+				requestAnimationFrame(update);
+			});
+
+			requestAnimationFrame(update);
+		}
+
+		if(parameters['mei'] && parameters['meo']) {
+			document.addEventListener('focusout', function() {
+				window.top.postMessage({
+					name: 'IFRAME_FOCUSOUT',
+					id: parameters['mei']
+				}, parameters['meo']);
+			});
+		}
+
+		//
+		var paths = {
+			puremvc: '//d2e7safhr461sc.cloudfront.net/js/puremvc/puremvc-typescript-multicore-1.0-min',
+			ProductViewer: '//d2e7safhr461sc.cloudfront.net/js/product-viewer/product-viewer-3.3.3.0-min',
+		};
+
+		var shims = {
+			'ProductViewer': {
+				deps: ['puremvc']
+			}
+		};
+
+		var deps = { deps: ['ProductViewer'] };
+
+		paths.ThreeJS = '//d2e7safhr461sc.cloudfront.net/js/three.js/three.dist.min';
+		paths.ProductViewerWebGLRenderer = '//d2e7safhr461sc.cloudfront.net/js/product-viewer-webgl-renderer/product-viewer-webgl-renderer-3.1.0.0-dev15-min';
+		shims.ProductViewerWebGLRenderer = deps;
+
+		paths.ProductViewer2DCanvasRenderer = '//d2e7safhr461sc.cloudfront.net/js/product-viewer-2d-canvas-renderer/product-viewer-2d-canvas-renderer-3.2.12.0';
+		shims.ProductViewer2DCanvasRenderer = deps;
+
+		paths.ProductViewerHtmlRenderer = '//d2e7safhr461sc.cloudfront.net/js/product-viewer-html-renderer/product-viewer-html-renderer-0.0.3-min';
+		shims.ProductViewerHtmlRenderer = deps;
+
+		paths.Snap = "/acp/js/snapsvg/snap.svg-min";
+		paths.ProductViewerSvgRenderer = '//d2e7safhr461sc.cloudfront.net/js/product-viewer-svg-renderer/product-viewer-svg-renderer-0.0.1-min';
+		shims.ProductViewerSvgRenderer = deps;
+
+		paths.ProductViewerNullRenderer = '//d2e7safhr461sc.cloudfront.net/js/product-viewer-null-renderer/product-viewer-null-renderer-0.0.1-min';
+		shims.ProductViewerNullRenderer = deps;
+
+		//
+		require.config({
+			baseUrl: '.',
+
+			paths: paths,
+			shims: shims,
+		});
+
+		//
+		var reqs = getReqs(settings, parameters);
+
+		if(settings['sys.multi-renderer']) {
+			require(reqs, function(Layout, ProductViewer, Space3DRenderer, Space2DRenderer) {
+				var renderers = {};
+
+				if(Space2DRenderer == Space3DRenderer && Space2DRenderer != null) {
+					renderers['2D'] = renderers['3D'] = {
+						ns: Space2DRenderer,
+						facade: new Space2DRenderer.ApplicationFacade()
+					};
+				} else {
+					if(Space2DRenderer) {
+						renderers['2D'] = {
+							ns: Space2DRenderer,
+							facade: new Space2DRenderer.ApplicationFacade()
+						};
+					}
+
+					if(Space3DRenderer) {
+						renderers['3D'] = {
+							ns: Space3DRenderer,
+							facade: new Space3DRenderer.ApplicationFacade()
+						};
+					}
+				}
+
+				var l = new Layout(ProductViewer, renderers, settings, parameters, '/acp', 'https://legacy.custom-gateway.net/acp', getI18N());
+				l.start();
+			});
+		} else {
+			require(reqs, function(Layout, ProductViewer, Renderer) {
+				var l = new Layout(ProductViewer, Renderer, settings, '/acp', 'https://legacy.custom-gateway.net/acp', parameters);
+
+				l.setParameters(parameters);
+				l.start();
+			});
+		}
+	})();
+</script>
+		<!--[if lte IE 9]>
+<script>
+// Required for IE <= 8 Compat
+jQuery.ajaxSetup({
+	xhr: function() {
+		try {
+			if (window.ActiveXObject)
+				return new window.ActiveXObject("Microsoft.XMLHTTP");
+		} catch (e) {
+		}
+
+		return new window.XMLHttpRequest();
+	}
+});
+</script>
+<![endif]-->
+
+
+				<style>
+			@media only screen and (max-width: 767px){
+				#page-sidebar {
+					display: block;
+					position: relative;
+					clear: both;
+					top:0;
+					right: 0;
+					overflow: visible;
+					width: 96%;
+				}
+
+				#page-content {
+					display: block;
+					position: relative;
+					clear: both;
+					top:0;
+					right: 0;
+					overflow: visible;
+					width: 99% !important;
+				}
+
+				#add-to-cart {
+					display:block;
+					width: 90%;
+				}
+
+				.columns .column.main {
+					width: 100%;
+					padding: 6px;
+				}
+
+				#product-info-price{
+					bottom: 39px;
+				}
+
+				#page-content>div, #page-content{
+					max-height: 300px;
+				}
+
+				section#page-sidebar::after {
+ 					content: "";
+ 					background: transparent;
+					width: 100%;
+					height: 400px;
+					width: 13%;
+					height: 300px;
+ 					position: absolute;
+ 				}
+
+				section#page-content::before {
+					content: "";
+					background: transparent;
+					width: 13%;
+					height: 300px;
+					position: absolute;
+					right: 0;
+				}
+
+				#page-content>#renderer {
+					width: 75%;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+
+				#model-controls-container .controls {
+					position: relative;
+					z-index: 999;
+				}
+			}
+		</style>
+			</head>
+
+	<body>
+		<!--[if lt IE 10]>
+		<h1 class="browser-warning">
+				This site requires Internet Explorer 10 or above. Please consider
+				either <a target="_blank" href="http://windows.microsoft.com/en-gb/internet-explorer/downloads/ie-10/worldwide-languages">upgrading Internet Explorer</a>
+				or switching to a <a target="_blank" href="http://browserchoice.eu">different
+				browser</a>.
+		</h1>
+
+		<style>#page-content, #page-sidebar { display: none; }</style>
+		<![endif]-->
+
+		<!-- ko if: parameters['css'] -->
+		<link rel="stylesheet" type="text/css" data-bind="attr: { href: parameters['css'] }" />
+		<!-- /ko -->
+
+		<div id="fb-root"></div>
+
+				<h1 class="warning">This is a distributed app and should not be used via this URL</h1>
+
+		<div id="add-image-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.addImagePopup.show">
+	<article class="box popup-contents">
+		<h1>Add your image</h1>
+
+		<span>Where would you like to add an image from?</span>
+
+		<div class="add-image-methods">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.addImagePopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="pixlr-popup" class="popup" style="display:none" data-bind="visible: extra.pixlrPopup.show">
+	<article class="box popup-contents">
+		<h1>
+			Image Editor
+			<div class="close" data-bind="click: extra.pixlrPopup.close"></div>
+		</h1>
+
+		<iframe class="pixlr" data-bind="attr: { src: extra.pixlrPopup.iframeUrl }"></iframe>
+
+		<p><h2>When you have completed your design please go to the "File" menu and select "Save to" add your design to your product.</h2></p>
+
+		<div class="actions">
+			<button data-bind="click: extra.pixlrPopup.close">Close</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div class="social-albums-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.socialAlbumsPopup.show() == 'facebook'">
+	<article class="box popup-contents">
+		<h1>Select your image</h1>
+
+		<h4>Please select an album:</h4>
+
+		<select data-bind="value: facebookAlbums.selectedAlbum, options: facebookAlbums.albums, optionsText: function(item) { return item.name; }"></select>
+
+		<h4 data-bind="visible: facebookAlbums.photos().length > 0">Please select an image:</h4>
+
+		<div class="images" data-bind="foreach: facebookAlbums.photos">
+			<div class="image" data-bind="click: $parent.extra.socialAlbumsPopup.handlePhotoSelection">
+				<img data-bind="attr: { src: thumbnailUrl }" />
+			</div>
+		</div>
+
+		<div class="actions">
+			<button data-bind="visible: facebookAlbums.hasPrevious, click: facebookAlbums.loadPrevious">Previous</button>
+			<button data-bind="visible: facebookAlbums.hasNext, click: facebookAlbums.loadNext">Next</button>
+
+			<button data-bind="click: extra.socialAlbumsPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>		<div class="social-albums-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.socialAlbumsPopup.show() == 'google-plus'">
+	<article class="box popup-contents">
+		<h1>Select your image</h1>
+
+		<h4>Please select an album:</h4>
+
+		<select data-bind="value: googlePlusAlbums.selectedAlbum, options: googlePlusAlbums.albums, optionsText: function(item) { return item.name; }"></select>
+
+		<h4 data-bind="visible: googlePlusAlbums.photos().length > 0">Please select an image:</h4>
+
+		<div class="images" data-bind="foreach: googlePlusAlbums.photos">
+			<div class="image" data-bind="click: $parent.extra.socialAlbumsPopup.handlePhotoSelection">
+				<img data-bind="attr: { src: thumbnailUrl }" />
+			</div>
+		</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.socialAlbumsPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>		<div class="social-albums-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.socialAlbumsPopup.show() == 'instagram'">
+	<article class="box popup-contents">
+		<h1>Select your image</h1>
+
+		<h4 data-bind="visible: instagram.photos().length > 0">Please select an image:</h4>
+
+		<div class="images" data-bind="foreach: instagram.photos">
+			<div class="image" data-bind="click: $parent.extra.socialAlbumsPopup.handlePhotoSelection">
+				<img data-bind="attr: { src: thumbnailUrl }" />
+			</div>
+		</div>
+
+		<div class="actions">
+			<button data-bind="visible: instagram.hasMore, click: instagram.loadMore">More</button>
+			<button data-bind="click: extra.socialAlbumsPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div class="social-albums-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.socialAlbumsPopup.show() == 'flickr'">
+	<article class="box popup-contents">
+		<h1>Select your image</h1>
+
+		<h4 data-bind="visible: flickr.photos().length > 0">Please select an image:</h4>
+
+		<div class="images" data-bind="foreach: flickr.photos">
+			<div class="image" data-bind="click: $parent.extra.socialAlbumsPopup.handlePhotoSelection">
+				<img data-bind="attr: { src: thumbnailUrl }" />
+			</div>
+		</div>
+
+		<div class="actions">
+			<button data-bind="visible: flickr.hasPrevious, click: flickr.loadPrevious">Previous</button>
+			<button data-bind="visible: flickr.hasNext, click: flickr.loadNext">Next</button>
+
+			<button data-bind="click: extra.socialAlbumsPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>		<div class="social-albums-popup" style="display: none" class="popup" data-bind="fadeVisible: extra.genericImageCollectionPopup.show">
+	<article class="box popup-contents">
+		<h1>Select your image</h1>
+
+		<div class="note" style="margin: 15px 0;">Any watermarks will be removed once your order has been processed.</div>
+
+		<label>Search:</label>
+		<input type="text" placeholder="Search..." data-bind="value: extra.genericImageCollectionPopup.context().keywords, valueUpdate: 'keyup'" />
+
+		<div class="images" data-bind="foreach: extra.genericImageCollectionPopup.context().images">
+			<div class="image" data-bind="click: $parent.extra.genericImageCollectionPopup.handleImageSelection">
+				<img data-bind="attr: { src: urls.thumbnail }" />
+			</div>
+		</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.genericImageCollectionPopup.loadMore">Load More</button>
+			<button data-bind="click: extra.genericImageCollectionPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div style="display: none;" class="popup" id="message-box-container" data-bind="with: messageBox, fadeVisible: messageBox.isEnabled">
+	<article class="box popup-contents">
+		<h1>
+			<!-- ko if: type() == 'VALIDATION_IMAGE_TOO_SMALL' -->
+			Image Quality Warning			<!-- /ko -->
+
+			<!-- ko ifnot: type() == 'VALIDATION_IMAGE_TOO_SMALL' -->
+			Validation			<!-- /ko -->
+		</h1>
+
+		<div data-bind="if: type() == 'ERROR'">
+			<div id="message-box-text" data-bind="text: message"></div>
+
+			<div class="actions">
+				<button data-bind="click: no">Ok</button>
+			</div>
+		</div>
+
+		<div data-bind="if: type() == 'VALIDATION_IMAGE_TOO_SMALL'" class="validation-image-too-small">
+			<div id="message-box-text">
+				<p data-bind="text: message"></p>
+				<p>If you choose to proceed your finished product may look a little blurred</p>
+			</div>
+
+			<div class="faces">
+				<button data-bind="click: no">
+					<img src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/sad-face.png" />
+
+					<p>
+						Upload Another					</p>
+				</button>
+
+				<button data-bind="click: yes">
+					<img src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/happy-face.png" />
+
+					<p>
+						Proceed Anyway					</p>
+				</button>
+			</div>
+		</div>
+
+		<div data-bind="if: type() == 'VALIDATION_IMAGE_DOESNT_FILL_AREA'">
+			<div id="message-box-text">One or more of your images don't fill the printable area.</div>
+
+			<div class="actions">
+				<button data-bind="click: function() { isEnabled(false) }">Go Back</button>
+				<button data-bind="click: no">I Don't Mind</button>
+			</div>
+		</div>
+
+		<div data-bind="if: type() == 'VALIDATION_INVALID_IMAGE_EXTENSION'">
+			<div id="message-box-text">
+				Only the following image types are allowed:
+				<ul>
+				<li></li>				</ul>
+			</div>
+
+			<div class="actions">
+				<button data-bind="click: no">OK</button>
+			</div>
+		</div>
+
+		<div data-bind="if: type() == 'VALIDATION_TOO_MANY_COLOURS'">
+			<div id="message-box-text">Your image has too many colours. Please try uploading an image with fewer colours.</div>
+
+			<div class="actions">
+				<button data-bind="click: no">OK</button>
+			</div>
+		</div>
+
+		<div data-bind="if: type() == 'VALIDATION_IMAGES_MISSING'">
+			<div id="message-box-text">You have not uploaded an image to all of the available areas.</div>
+
+			<div class="actions">
+				<button data-bind="click: no">OK</button>
+			</div>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="save-sample-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.saveSamplePopup.show">
+	<article class="box popup-contents">
+		<h1>Save Sample</h1>
+
+		<label>Give your sample a name:</label>
+		<input type="text" data-bind="value: saveSample.name" />
+
+		<label>Any notes?:</label>
+		<textarea data-bind="value: saveSample.comments"></textarea>
+
+		<article>
+			<h2>Image Options</h2>
+
+			<input id="snapshot-thumbnail" type="checkbox" data-bind="checked: saveSample.generators['snapshot-thumbnail']"></input>
+			<label for="snapshot-thumbnail">Thumbnail</label>
+
+			<input id="snapshot-large" type="checkbox" data-bind="checked: saveSample.generators['snapshot-large']"></input>
+			<label for="snapshot-large">Large</label>
+
+			<input id="snapshot-medium" type="checkbox" data-bind="checked: saveSample.generators['snapshot-medium']"></input>
+			<label for="snapshot-medium">Medium</label>
+
+			<input id="snapshot-small" type="checkbox" data-bind="checked: saveSample.generators['snapshot-small']"></input>
+			<label for="snapshot-small">Small</label>
+
+			<input id="snapshot-extra-small" type="checkbox" data-bind="checked: saveSample.generators['snapshot-extra-small']"></input>
+			<label for="snapshot-extra-small">Extra Small</label>
+		</article>
+
+		<article>
+			<h2>PDF Options</h2>
+
+			<input id="pdf-portrait-2x3" type="checkbox" data-bind="checked: saveSample.generators['pdf-portrait-2x3']"></input>
+			<label for="pdf-portrait-2x3">Portrait 2x3</label>
+
+			<input id="pdf-portrait-2x2" type="checkbox" data-bind="checked: saveSample.generators['pdf-portrait-2x2']"></input>
+			<label for="pdf-portrait-2x2">Portrait 2x2</label>
+
+			<input id="pdf-portrait-1x2" type="checkbox" data-bind="checked: saveSample.generators['pdf-portrait-1x2']"></input>
+			<label for="pdf-portrait-1x2">Portrait 1x2</label>
+
+			<input id="pdf-landscape-1x1" type="checkbox" data-bind="checked: saveSample.generators['pdf-landscape-1x1']"></input>
+			<label for="pdf-landscape-1x1">Landscape 1x1</label>
+
+			<input id="pdf-landscape-2x1" type="checkbox" data-bind="checked: saveSample.generators['pdf-landscape-2x1']"></input>
+			<label for="pdf-landscape-2x1">Landscape 2x1</label>
+
+			<input id="pdf-custom" type="checkbox" data-bind="checked: saveSample.generators['pdf-custom']"></input>
+			<label for="pdf-custom">Custom</label>
+		</article>
+
+		<article data-bind="visible: parameters.r != '2d-canvas'">
+			<h2>Animation Options</h2>
+
+			<input id="animated-gif" type="checkbox" data-bind="checked: saveSample.generators['animated-gif']"></input>
+			<label for="animated-gif">Animated GIF</label>
+
+			<input id="animated-mpeg" type="checkbox" data-bind="checked: saveSample.generators['animated-mpeg']"></input>
+			<label for="animated-mpeg">Animated MPEG</label>
+		</article>
+
+		<div class="warning">
+			Saving a sample may take several minutes depending on how many output options have been selected. Please be patient.		</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.saveSamplePopup.save">Save</button>
+			<button data-bind="click: extra.saveSamplePopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+
+<div id="save-sample-complete-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.saveSampleCompletePopup.show">
+	<article class="box popup-contents">
+		<h1>Your sample has been saved</h1>
+
+		<table>
+			<tbody data-bind="foreach: extra.saveSampleCompletePopup.outputs">
+				<tr>
+					<td style="width: 32px;"><a target="_blank" data-bind="attr: { href: url }"><div data-bind="attr: { 'class': 'icon ' + cssClass }"></div></a></td>
+					<td style="width: 20%;" data-bind="text: name"></td>
+					<td><button data-bind="click: $parent.extra.saveSampleCompletePopup.openOutput">Open</button></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="actions">
+			<button data-bind="click: extra.saveSampleCompletePopup.close">OK</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="share-via-email-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.shareViaEmailPopup.show">
+	<article class="box popup-contents">
+		<h1>Share via Email</h1>
+
+		<label>Send to:</label>
+		<input type="text" placeholder="example@example.com" data-bind="value: saveSample.emailTo, valueUpdate: 'keyup'" />
+
+		<div class="actions">
+			<button data-bind="visible: saveSample.emailTo, click: extra.shareViaEmailPopup.save">Send</button>
+			<button data-bind="click: extra.shareViaEmailPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+
+<div id="share-via-email-complete-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.shareViaEmailCompletePopup.show">
+	<article class="box popup-contents">
+		<h1>Your sample has been sent</h1>
+
+		<div class="actions">
+			<button data-bind="click: extra.shareViaEmailCompletePopup.close">OK</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+
+</div>
+		<div id="save-enquiry-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.saveEnquiryPopup.show">
+	<article class="box popup-contents">
+		<h1>Send an Enquiry</h1>
+
+		<div>
+			<label>Your name:</label>
+			<input type="text" data-bind="value: saveSample.enquiryCustomerName" />
+		</div>
+
+		<div>
+			<label>Company:</label>
+			<input type="text" data-bind="value: saveSample.enquiryCompanyName" />
+		</div>
+
+		<div>
+			<label>Email:</label>
+			<input type="email" data-bind="value: saveSample.enquiryEmail" />
+		</div>
+
+		<div>
+			<label>Telephone:</label>
+			<input type="tel" data-bind="value: saveSample.enquiryTelephone" />
+		</div>
+
+		<div>
+			<label>Quantity Required:</label>
+			<input type="number" data-bind="value: saveSample.enquiryQuantityRequired" />
+		</div>
+
+		<div>
+			<label>Any comments?:</label>
+			<textarea data-bind="value: saveSample.enquiryComments"></textarea>
+		</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.saveEnquiryPopup.save">Send</button>
+			<button data-bind="click: extra.saveEnquiryPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+
+<div id="save-enquiry-complete-popup" style="display: none;" class="popup" data-bind="fadeVisible: extra.saveEnquiryCompletePopup.show">
+	<article class="box popup-contents">
+		<h1>Your enquiry has been sent</h1>
+
+		<div class="actions">
+			<button data-bind="click: extra.saveEnquiryCompletePopup.close">OK</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="approval-popup" class="popup" style="display:none" data-bind="visible: extra.approvalPopup.show">
+	<div class="popup-contents">
+
+		<h1>
+			Approval needed
+			<div class="close" data-bind="click: extra.approvalPopup.close"></div>
+		</h1>
+
+		<div class="popup-wrapper">
+            <p>Please indicate that you approve this design.</p>
+		    <strong>Online proof approval</strong>
+            <p>By clicking the approval button, I agree that spelling, content and layout are correct. I understand that my document will print exactly as it appears above and that I cannot make any changes once my order has been placed.</p>
+		    <strong>Copyright Permission</strong>
+		    <p>I confirm that I am the copyright owner of any uploaded images.</p>
+		    <strong>I have read the statement above and approve.</strong>
+            <div class="button" data-bind="click: extra.approvalPopup.approve">Approve</div>
+		</div>
+
+		<div class="popup-bottom">
+		    <span class="button" data-bind="click: extra.approvalPopup.close">Cancel</span>
+		</div>
+	</div>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="pos-popup" class="popup" style="display:none" data-bind="visible: extra.posDetailsPopup.show">
+	<article class="box popup-contents">
+		<h1>
+			Order Details
+			<div class="close" data-bind="click: extra.posDetailsPopup.close"></div>
+		</h1>
+
+		<table>
+			<tr>
+				<th>Name:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.customer_name" /></td>
+
+				<th>Telephone:</th>
+				<td><input data-bind="value: extra.posDetailsPopup.order.customer_telephone" /></td>
+
+				<th>Email:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.customer_email" /></td>
+			</tr>
+
+			<tr>
+				<th>Address 1:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.shipping_address_1" /></td>
+
+				<th>Address 2:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.shipping_address_2" /></td>
+
+				<th>Town/City:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.shipping_address_4" /></td>
+
+				<th>Region:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.shipping_address_5" /></td>
+			</tr>
+
+			<tr>
+				<th>Postcode:</th>
+				<td><input required="required" data-bind="value: extra.posDetailsPopup.order.shipping_postcode" /></td>
+
+				<th>Country:</th>
+				<td class="styled-select">
+					<select data-bind="value: extra.posDetailsPopup.order.shipping_country_code">
+						<option value="GB">United Kingdom</option>
+						<option value="US">United States</option>
+						<option value="AF">Afghanistan</option>
+						<option value="AX">Åland Islands</option>
+						<option value="AL">Albania</option>
+						<option value="DZ">Algeria</option>
+						<option value="AS">American Samoa</option>
+						<option value="AD">Andorra</option>
+						<option value="AO">Angola</option>
+						<option value="AI">Anguilla</option>
+						<option value="AQ">Antarctica</option>
+						<option value="AG">Antigua and Barbuda</option>
+						<option value="AR">Argentina</option>
+						<option value="AM">Armenia</option>
+						<option value="AW">Aruba</option>
+						<option value="AU">Australia</option>
+						<option value="AT">Austria</option>
+						<option value="AZ">Azerbaijan</option>
+						<option value="BS">Bahamas</option>
+						<option value="BH">Bahrain</option>
+						<option value="BD">Bangladesh</option>
+						<option value="BB">Barbados</option>
+						<option value="BY">Belarus</option>
+						<option value="BE">Belgium</option>
+						<option value="BZ">Belize</option>
+						<option value="BJ">Benin</option>
+						<option value="BM">Bermuda</option>
+						<option value="BT">Bhutan</option>
+						<option value="BO">Bolivia, Plurinational State of</option>
+						<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+						<option value="BA">Bosnia and Herzegovina</option>
+						<option value="BW">Botswana</option>
+						<option value="BV">Bouvet Island</option>
+						<option value="BR">Brazil</option>
+						<option value="IO">British Indian Ocean Territory</option>
+						<option value="BN">Brunei Darussalam</option>
+						<option value="BG">Bulgaria</option>
+						<option value="BF">Burkina Faso</option>
+						<option value="BI">Burundi</option>
+						<option value="KH">Cambodia</option>
+						<option value="CM">Cameroon</option>
+						<option value="CA">Canada</option>
+						<option value="CV">Cape Verde</option>
+						<option value="KY">Cayman Islands</option>
+						<option value="CF">Central African Republic</option>
+						<option value="TD">Chad</option>
+						<option value="CL">Chile</option>
+						<option value="CN">China</option>
+						<option value="CX">Christmas Island</option>
+						<option value="CC">Cocos (Keeling) Islands</option>
+						<option value="CO">Colombia</option>
+						<option value="KM">Comoros</option>
+						<option value="CG">Congo</option>
+						<option value="CD">Congo, the Democratic Republic of the</option>
+						<option value="CK">Cook Islands</option>
+						<option value="CR">Costa Rica</option>
+						<option value="CI">Côte d'Ivoire</option>
+						<option value="HR">Croatia</option>
+						<option value="CU">Cuba</option>
+						<option value="CW">Curaçao</option>
+						<option value="CY">Cyprus</option>
+						<option value="CZ">Czech Republic</option>
+						<option value="DK">Denmark</option>
+						<option value="DJ">Djibouti</option>
+						<option value="DM">Dominica</option>
+						<option value="DO">Dominican Republic</option>
+						<option value="EC">Ecuador</option>
+						<option value="EG">Egypt</option>
+						<option value="SV">El Salvador</option>
+						<option value="GQ">Equatorial Guinea</option>
+						<option value="ER">Eritrea</option>
+						<option value="EE">Estonia</option>
+						<option value="ET">Ethiopia</option>
+						<option value="FK">Falkland Islands (Malvinas)</option>
+						<option value="FO">Faroe Islands</option>
+						<option value="FJ">Fiji</option>
+						<option value="FI">Finland</option>
+						<option value="FR">France</option>
+						<option value="GF">French Guiana</option>
+						<option value="PF">French Polynesia</option>
+						<option value="TF">French Southern Territories</option>
+						<option value="GA">Gabon</option>
+						<option value="GM">Gambia</option>
+						<option value="GE">Georgia</option>
+						<option value="DE">Germany</option>
+						<option value="GH">Ghana</option>
+						<option value="GI">Gibraltar</option>
+						<option value="GR">Greece</option>
+						<option value="GL">Greenland</option>
+						<option value="GD">Grenada</option>
+						<option value="GP">Guadeloupe</option>
+						<option value="GU">Guam</option>
+						<option value="GT">Guatemala</option>
+						<option value="GG">Guernsey</option>
+						<option value="GN">Guinea</option>
+						<option value="GW">Guinea-Bissau</option>
+						<option value="GY">Guyana</option>
+						<option value="HT">Haiti</option>
+						<option value="HM">Heard Island and McDonald Islands</option>
+						<option value="VA">Holy See (Vatican City State)</option>
+						<option value="HN">Honduras</option>
+						<option value="HK">Hong Kong</option>
+						<option value="HU">Hungary</option>
+						<option value="IS">Iceland</option>
+						<option value="IN">India</option>
+						<option value="ID">Indonesia</option>
+						<option value="IR">Iran, Islamic Republic of</option>
+						<option value="IQ">Iraq</option>
+						<option value="IE">Ireland</option>
+						<option value="IM">Isle of Man</option>
+						<option value="IL">Israel</option>
+						<option value="IT">Italy</option>
+						<option value="JM">Jamaica</option>
+						<option value="JP">Japan</option>
+						<option value="JE">Jersey</option>
+						<option value="JO">Jordan</option>
+						<option value="KZ">Kazakhstan</option>
+						<option value="KE">Kenya</option>
+						<option value="KI">Kiribati</option>
+						<option value="KP">Korea, Democratic People's Republic of</option>
+						<option value="KR">Korea, Republic of</option>
+						<option value="KW">Kuwait</option>
+						<option value="KG">Kyrgyzstan</option>
+						<option value="LA">Lao People's Democratic Republic</option>
+						<option value="LV">Latvia</option>
+						<option value="LB">Lebanon</option>
+						<option value="LS">Lesotho</option>
+						<option value="LR">Liberia</option>
+						<option value="LY">Libya</option>
+						<option value="LI">Liechtenstein</option>
+						<option value="LT">Lithuania</option>
+						<option value="LU">Luxembourg</option>
+						<option value="MO">Macao</option>
+						<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+						<option value="MG">Madagascar</option>
+						<option value="MW">Malawi</option>
+						<option value="MY">Malaysia</option>
+						<option value="MV">Maldives</option>
+						<option value="ML">Mali</option>
+						<option value="MT">Malta</option>
+						<option value="MH">Marshall Islands</option>
+						<option value="MQ">Martinique</option>
+						<option value="MR">Mauritania</option>
+						<option value="MU">Mauritius</option>
+						<option value="YT">Mayotte</option>
+						<option value="MX">Mexico</option>
+						<option value="FM">Micronesia, Federated States of</option>
+						<option value="MD">Moldova, Republic of</option>
+						<option value="MC">Monaco</option>
+						<option value="MN">Mongolia</option>
+						<option value="ME">Montenegro</option>
+						<option value="MS">Montserrat</option>
+						<option value="MA">Morocco</option>
+						<option value="MZ">Mozambique</option>
+						<option value="MM">Myanmar</option>
+						<option value="NA">Namibia</option>
+						<option value="NR">Nauru</option>
+						<option value="NP">Nepal</option>
+						<option value="NL">Netherlands</option>
+						<option value="NC">New Caledonia</option>
+						<option value="NZ">New Zealand</option>
+						<option value="NI">Nicaragua</option>
+						<option value="NE">Niger</option>
+						<option value="NG">Nigeria</option>
+						<option value="NU">Niue</option>
+						<option value="NF">Norfolk Island</option>
+						<option value="MP">Northern Mariana Islands</option>
+						<option value="NO">Norway</option>
+						<option value="OM">Oman</option>
+						<option value="PK">Pakistan</option>
+						<option value="PW">Palau</option>
+						<option value="PS">Palestinian Territory, Occupied</option>
+						<option value="PA">Panama</option>
+						<option value="PG">Papua New Guinea</option>
+						<option value="PY">Paraguay</option>
+						<option value="PE">Peru</option>
+						<option value="PH">Philippines</option>
+						<option value="PN">Pitcairn</option>
+						<option value="PL">Poland</option>
+						<option value="PT">Portugal</option>
+						<option value="PR">Puerto Rico</option>
+						<option value="QA">Qatar</option>
+						<option value="RE">Réunion</option>
+						<option value="RO">Romania</option>
+						<option value="RU">Russian Federation</option>
+						<option value="RW">Rwanda</option>
+						<option value="BL">Saint Barthélemy</option>
+						<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+						<option value="KN">Saint Kitts and Nevis</option>
+						<option value="LC">Saint Lucia</option>
+						<option value="MF">Saint Martin (French part)</option>
+						<option value="PM">Saint Pierre and Miquelon</option>
+						<option value="VC">Saint Vincent and the Grenadines</option>
+						<option value="WS">Samoa</option>
+						<option value="SM">San Marino</option>
+						<option value="ST">Sao Tome and Principe</option>
+						<option value="SA">Saudi Arabia</option>
+						<option value="SN">Senegal</option>
+						<option value="RS">Serbia</option>
+						<option value="SC">Seychelles</option>
+						<option value="SL">Sierra Leone</option>
+						<option value="SG">Singapore</option>
+						<option value="SX">Sint Maarten (Dutch part)</option>
+						<option value="SK">Slovakia</option>
+						<option value="SI">Slovenia</option>
+						<option value="SB">Solomon Islands</option>
+						<option value="SO">Somalia</option>
+						<option value="ZA">South Africa</option>
+						<option value="GS">South Georgia and the South Sandwich Islands</option>
+						<option value="SS">South Sudan</option>
+						<option value="ES">Spain</option>
+						<option value="LK">Sri Lanka</option>
+						<option value="SD">Sudan</option>
+						<option value="SR">Suriname</option>
+						<option value="SJ">Svalbard and Jan Mayen</option>
+						<option value="SZ">Swaziland</option>
+						<option value="SE">Sweden</option>
+						<option value="CH">Switzerland</option>
+						<option value="SY">Syrian Arab Republic</option>
+						<option value="TW">Taiwan, Province of China</option>
+						<option value="TJ">Tajikistan</option>
+						<option value="TZ">Tanzania, United Republic of</option>
+						<option value="TH">Thailand</option>
+						<option value="TL">Timor-Leste</option>
+						<option value="TG">Togo</option>
+						<option value="TK">Tokelau</option>
+						<option value="TO">Tonga</option>
+						<option value="TT">Trinidad and Tobago</option>
+						<option value="TN">Tunisia</option>
+						<option value="TR">Turkey</option>
+						<option value="TM">Turkmenistan</option>
+						<option value="TC">Turks and Caicos Islands</option>
+						<option value="TV">Tuvalu</option>
+						<option value="UG">Uganda</option>
+						<option value="UA">Ukraine</option>
+						<option value="AE">United Arab Emirates</option>
+						<option value="UM">United States Minor Outlying Islands</option>
+						<option value="UY">Uruguay</option>
+						<option value="UZ">Uzbekistan</option>
+						<option value="VU">Vanuatu</option>
+						<option value="VE">Venezuela, Bolivarian Republic of</option>
+						<option value="VN">Viet Nam</option>
+						<option value="VG">Virgin Islands, British</option>
+						<option value="VI">Virgin Islands, U.S.</option>
+						<option value="WF">Wallis and Futuna</option>
+						<option value="EH">Western Sahara</option>
+						<option value="YE">Yemen</option>
+						<option value="ZM">Zambia</option>
+						<option value="ZW">Zimbabwe</option>
+					</select>
+				</td>
+
+			</tr>
+		</table>
+
+		<div class="actions">
+			<span class="note">Please click OK to proceed with your order</span>
+			<button data-bind="click: extra.posDetailsPopup.save">OK</button>
+			<button data-bind="click: extra.posDetailsPopup.close">Cancel</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="preview-popup" class="popup" style="display:none" data-bind="visible: extra.previewPopup.show">
+	<article class="box popup-contents">
+		<h1>
+			3D Preview
+			<div class="close" data-bind="click: extra.previewPopup.close"></div>
+		</h1>
+
+				<iframe id="webgl-preview-iframe" src="./?l=noui3_2#preview=1&r=webgl"></iframe>
+
+		<div class="actions">
+			<button data-bind="click: extra.previewPopup.close">Close</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="preview-popup" class="popup" style="display:none" data-bind="visible: extra.directSmilePopup.show">
+	<article class="box popup-contents">
+		<h1>
+			Full Preview
+			<div class="close" data-bind="click: extra.directSmilePopup.close"></div>
+		</h1>
+
+		<iframe data-bind="attr: { src: extra.directSmilePopup.iframeUrl }"></iframe>
+
+		<div class="actions">
+			<button data-bind="click: extra.directSmilePopup.close">Close</button>
+		</div>
+	</article>
+
+	<div class="popup-mask"></div>
+</div>
+		<div id="qr-popup" class="popup" style="display: none;" data-bind="visible: extra.qrPopup.show">
+	<article class="box popup-contents">
+		<h1>
+			Upload via QR
+			<div class="close" data-bind="click: extra.qrPopup.close"></div>
+		</h1>
+
+		<div>
+			<p>Please scan the below QR code using a QR reader app on your device.</p>
+			<p>If you don't have a QR reader installed, then we recommend "Quick Scan" which can be downloaded from either the App Store or Google Play.</p>
+
+			<img data-bind="attr: { src: $root.qrImageUploader.qrDataUri }" />
+
+			<p>This window will close automatically once you have uploaded an image using your mobile device.</p>
+		</div>
+
+		<div class="actions">
+			<button data-bind="click: extra.qrPopup.close">Close</button>
+		</div>
+	</article>
+</div>
+
+
+
+		<div id="remove-background-container">
+			<div id="remove-background-popup-container" style="display: none;" data-bind="visible: extra.removeBackgroundPopup.show">
+				<article class="box popup-contents">
+					<header>
+						<h1>
+							Remove Background						</h1>
+
+						<div class="close"></div>
+					</header>
+
+					<p>Click a point on your image to remove similar colours from around that point.</p>
+
+					<div class="tolerance">
+						<label>Tolerance (<span data-bind="text: (~~(removeBackground.tolerance() * 100)) + '%'"></span>):</label>
+						<div data-bind="slider: removeBackground.tolerance, sliderOptions: { value: 0.1, min: 0, max: 2, step: 0.1 }"></div>
+					</div>
+
+					<div class="canvas-container">
+						<canvas></canvas>
+					</div>
+
+					<div class="actions" data-bind="with: removeBackground">
+						<button class="reset" data-bind="click: reset">Reset</button>
+						<button class="save" data-bind="click: function() { save(); $parent.extra.removeBackgroundPopup.close(); }">Save</button>
+						<button class="cancel" data-bind="click: function() { $parent.extra.removeBackgroundPopup.close(); }">Cancel</button>
+					</div>
+				</article>
+
+				<div class="popup-mask"></div>
+			</div>
+		</div>
+
+				<section id="page-sidebar">
+			<div id="product-info">
+
+
+							</div>
+
+
+
+			<div id="views-container" style="display: none;" data-bind="visible: aspects.aspects().length == 0 && views.views().length > 1">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Views					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: views">
+			<div class="styled-select"><select data-bind="value: selectedView, options: sortedViews, optionsText: function(item) { return item.name; }"></select></div>
+		</div>
+	</article>
+</div>
+<div id="textures-container" style="display: none;" data-bind="style: { display: textures.textures().length > 0 ? 'block' : 'none' }">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Textures					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="foreach: textures.textures">
+			<div class="texture" data-bind="click: $parent.textures.selectedTexture">
+				<img data-bind="attr: { src: _texture_thumbnail_url }" />
+				<span data-bind="text: name"></span>
+			</div>
+		</div>
+	</article>
+</div>
+<div id="aspects" style="display: none;" data-bind="visible: aspects.aspects().length > 1 || (aspects.selectedAspect() && aspects.selectedAspect().options().length > 1)">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Style					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: aspects">
+			<div class="styled-select" data-bind="visible: aspects().length > 1">
+				<select data-bind="value: selectedAspect, options: aspects, optionsText: 'name', valueAllowUnset: true"></select>
+			</div>
+
+			<!-- ko if: selectedAspect() && selectedAspectOptions().length > 1 -->
+			<div data-bind="foreach: selectedAspectOptions" class="options">
+				<div class="option" data-bind="click: $parent.selectedOptions()[$parent.selectedAspect().id]">
+					<img data-bind="attr: { src: main_thumbnail_url }" />
+
+					<div data-bind="text: name"></div>
+				</div>
+			</div>
+			<!-- /ko -->
+		</div>
+	</article>
+</div>
+<div id="text-areas-container" style="display: none;" data-bind="style: { display: textAreas.areas().filter(function(t) { return t.allow_input; }).length > 0 && extra.plainOrBranded() == 'branded' ? 'block' : 'none' }">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Add Text					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: textAreas">
+
+						<div data-bind="foreach: alphaSortedAreas()
+								.filter(function(t) { return t.allow_input; })">
+							<span data-bind="text: name + ': '"></span>
+
+				<div data-bind="visible: options.length > 0">
+					<div class="styled-select"><select data-bind="options: options, click: $parents[1].textAreas.selectedArea, event: { change: function(a, e) { $parents[1].textAreas.setText(a, e.target.value); } }"></select></div>
+				</div>
+
+				<div data-bind="visible: options.length == 0, if: !isMultiline">
+					<input class="text-area-input" type="text" data-bind="
+						click: $parents[1].textAreas.selectedArea,
+						value: ko.readOnly(state.userText),
+						datepicker: {
+							enabled: type == 2,
+							value: function(a) { $parents[1].textAreas.setText($data, a); },
+							format: datepicker_format
+						},
+
+						attr: {
+							maxlength: (character_limit == 0) ? 5000 : character_limit,
+							placeholder: placeholder_text,
+							required: (is_required ? 'required' : ''),
+							readonly: state.isRenderDelegateBusy() || type == 2,
+						},
+
+						event: {
+							focus: $parents[1].textAreas.selectedArea,
+							keyup: function(a, e) { $parents[1].textAreas.setText(a, e.target.value); },
+					   }" />
+				</div>
+
+				<div data-bind="visible: options.length == 0, if: isMultiline">
+					<textarea class="text-area-input" type="text" data-bind="
+						click: $parents[1].textAreas.selectedArea,
+						value: ko.readOnly(state.userText),
+
+						attr: {
+							maxlength: (character_limit == 0) ? 5000 : character_limit,
+							placeholder: placeholder_text,
+							required: (is_required ? 'required' : ''),
+							readonly: state.isRenderDelegateBusy,
+						},
+
+						event: {
+							focus: $parents[1].textAreas.selectedArea,
+							keyup: function(a, e) { $parents[1].currentTextArea.text(e.target.value); },
+					}"></textarea>
+				</div>
+
+				<div class="line-limit" data-bind="visible: max_lines != 0, text: 'Max lines: ' + max_lines"></div>
+				<div class="character-limit" data-bind="visible: character_limit != 0, text: 'Max characters: ' + character_limit"></div>
+			</div>
+
+			<div data-bind="with: $parent.currentTextArea">
+				<div id="current-text-area-container" data-bind="if: textArea().allow_input">
+					<div>
+						<div class="styled-select" data-bind="visible: fonts().length > 1">
+							<div class="selected" data-bind="if: selectedFont">
+								<img class="font-img" data-bind="attr: { alt: selectedFont().font_description, src: selectedFont()._preview_url }" />
+							</div>
+
+							<ul data-bind="foreach: fonts">
+								<li data-bind="click: $parent.selectedFont">
+									<img data-bind="attr: { alt: font_description, src: _preview_url }" />
+								</li>
+							</ul>
+						</div>
+
+						<!-- ko if: sizes().length > 1 && textArea().allow_resize -->
+						<div class="styled-select"><select id="font-size-select" data-bind="value: selectedSize, options: sizes, optionsText: function(item) { return item.font_size; }, valueAllowUnset: true"></select></div>
+						<!-- /ko -->
+					</div>
+
+					<div data-bind="if: $parents[1].settings['defaults.text-area-effects.enabled'] && effects().length > 1">
+						<div class="styled-select"><select data-bind="value: selectedEffect, options: effects, optionsText: function(item) { return item.name; }"></select></div>
+					</div>
+
+					<div data-bind="visible: isFillEnabled">
+						<label data-bind="visible: isStrokeEnabled() && (colours().length > 1 || $root.extra.isTextAreaSpectrumEnabled())">Fill Colour:</label>
+
+												<div class="colour-panel" data-bind="foreach: colours, visible: !$parents[1].extra.isTextAreaSpectrumEnabled()">
+							<div class="colour-box" data-bind="style: {background: '#' + font_colour.substr(2)}, click: $parent.selectedColour"></div>
+						</div>
+
+						<div class="spectrum" data-bind="visible: $parents[1].extra.isTextAreaSpectrumEnabled">
+							<input type="text" data-bind="spectrum: selectedColour" />
+						</div>
+					</div>
+
+					<div data-bind="visible: isStrokeEnabled">
+						<label data-bind="visible: isFillEnabled() && (colours().length > 1 || $root.extra.isTextAreaSpectrumEnabled())">Outline Colour:</label>
+
+												<div class="colour-panel" data-bind="foreach: colours">
+							<div class="colour-box" data-bind="style: {background: '#' + font_colour.substr(2)}, click: $parent.selectedStrokeColour"></div>
+						</div>
+
+						<div class="spectrum" data-bind="visible: $parents[1].extra.isSpectrumEnabled">
+							<input type="text" data-bind="spectrum: selectedStrokeColour" />
+						</div>
+					</div>
+
+
+					<table class="controls" data-bind="if: $parents[1].settings['defaults.text-alignment.enabled']">
+						<tr>
+							<td><button title="Align Left" class="align-left" data-bind="click: setJustificationLeft"></button></td>
+							<td><button title="Align Center" class="align-center" data-bind="click: setJustificationCenter"></button></td>
+							<td><button title="Align Right" class="align-right" data-bind="click: setJustificationRight"></button></td>
+						</tr>
+					</table>
+
+					<table class="controls" data-bind="if: textArea().allow_rotate">
+						<tr>
+							<td><button title="Rotate Left" class="rotate-left" data-bind="event: { touchstart: startRotatingLeft, touchend: stopRotating, mousedown: startRotatingLeft, mouseout: stopRotating, mouseup: stopRotating }"></button></td>
+							<td><button title="Rotate Right" class="rotate-right" data-bind="event: { touchstart: startRotatingRight, touchend: stopRotating, mousedown: startRotatingRight, mouseout: stopRotating, mouseup: stopRotating }"></button></td>
+
+							<td><button title="Reset Rotation" class="reset" data-bind="click: resetRotation"></button></td>
+						</tr>
+					</table>
+
+					<table class="controls" data-bind="if: textArea().allow_move">
+						<tr>
+							<td><button title="Move Up" class="move-up" data-bind="event: { touchstart: startMovingUp, touchend: stopMoving, mousedown: startMovingUp, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+							<td><button title="Move Down" class="move-down" data-bind="event: { touchstart: startMovingDown, touchend: stopMoving, mousedown: startMovingDown, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+
+							<td><button title="Move Left" class="move-left" data-bind="event: { touchstart: startMovingLeft, touchend: stopMoving, mousedown: startMovingLeft, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+							<td><button title="Move Right" class="move-right" data-bind="event: { touchstart: startMovingRight, touchend: stopMoving, mousedown: startMovingRight, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+
+							<td><button title="Reset Position" class="reset" data-bind="click: resetPosition"></button></td>
+						</tr>
+					</table>
+
+					<div data-bind="if: !textArea().state.isTextMultiline() && textArea().allow_arc">
+						<span>Bend Text:</span>
+
+						<div data-bind="slider: arcAngle, sliderOptions: { min: -179, max: 179, step: 1 }"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+<div id="image-areas-container" style="display: none;" data-bind="style: { display: (imageAreas.doAnyAreasAllowUserInput() || imageAreas.doAnyAreasAllowGalleryInput()) && extra.plainOrBranded() == 'branded' ? 'block' : 'none' }">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Add Images					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: imageAreas">
+			<div data-bind="if: areas().filter(function(a) { return a.allow_input; }).length > 1">
+				<div class="styled-select">
+					<select data-bind="
+						value: selectedArea,
+
+												options: alphaSortedAreas().filter(function(a) { return a.allow_input; }),
+
+						optionsText: function(item) { return item.template_image_name; }"></select>
+				</div>
+			</div>
+
+			<div data-bind="with: $parent">
+				<div class="gallery-container" style="display: none;" data-bind="style: { display: extra.galleries().length > 0 ? 'block' : 'none' }">
+					<div data-bind="visible: extra.galleries().length > 1">
+						<div class="styled-select"><select data-bind="value: gallery.selectedGallery, options: extra.galleries, optionsText: function(g) { return g.name; }"></select></div>
+					</div>
+
+					<div data-bind="if: gallery.selectedGallery">
+						<div id="gallery-images-container" class="controls" data-bind="foreach: v.extra.sortGalleryImages(gallery.selectedGallery().images)">
+														<img draggable="false" class="gallery-image" data-bind="attr: { title: name, alt: name }, lazyload: thumbnailUrl, lazyloadOptions: { container: '#gallery-images-container' }, click: $parent.gallery.selectedImage, event: { dragstart: v.extra.handleGalleryDragStart }" />
+													</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="current-image-area-container" data-bind="with: $parent.currentImageArea">
+				<div class="buttons" data-bind='visible: !imageArea().gallery_only && imageArea().allow_input'>
+					<div title="Add Image" id="add-image" data-bind="click: $parents[1].extra.addImagePopup.open">
+						<div>Add Image</div>
+					</div>
+
+
+
+						<div title="Remove Background" data-bind="click: $parents[1].extra.removeBackgroundPopup.open" id="remove-background"></div>
+
+				</div>
+
+				<div data-bind="if: $parents[1].settings['defaults.image-area-effects.enabled'] && effects().length > 1">
+					<div class="styled-select"><select data-bind="value: selectedEffect, options: effects, optionsText: function(item) { return item.name; }"></select></div>
+				</div>
+
+				<table class="controls">
+					<tr>
+						<td data-bind="if: imageArea().allow_zoom"><button title="Zoom In" class="zoom-in" data-bind="event: { touchstart: startZoomingIn, touchend: stopZooming, mousedown: startZoomingIn, mouseout: stopZooming, mouseup: stopZooming }"></button></td>
+						<td data-bind="if: imageArea().allow_zoom"><button title="Zoom Out" class="zoom-out" data-bind="event: { touchstart: startZoomingOut, touchend: stopZooming, mousedown: startZoomingOut, mouseout: stopZooming, mouseup: stopZooming }"></button></td>
+
+						<td data-bind="if: imageArea().allow_zoom"><button title="Reset Zoom" class="reset" data-bind="click: resetZoom"></button></td>
+
+						<td data-bind="if: imageArea().allow_rotate"><button title="Rotate Left" class="rotate-left" data-bind="event: { touchstart: startRotatingLeft, touchend: stopRotating, mousedown: startRotatingLeft, mouseout: stopRotating, mouseup: stopRotating }"></button></td>
+						<td data-bind="if: imageArea().allow_rotate"><button title="Rotate Right" class="rotate-right" data-bind="event: { touchstart: startRotatingRight, touchend: stopRotating, mousedown: startRotatingRight, mouseout: stopRotating, mouseup: stopRotating }"></button></td>
+
+						<td data-bind="if: imageArea().allow_rotate"><button title="Reset Rotation" class="reset" data-bind="click: resetRotation"></button></td>
+					</tr>
+				</table>
+				<table class="controls" data-bind="if: imageArea().allow_move">
+					<tr>
+						<td><button title="Move Up" class="move-up" data-bind="event: { touchstart: startMovingUp, touchend: stopMoving, mousedown: startMovingUp, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+						<td><button title="Move Down" class="move-down" data-bind="event: { touchstart: startMovingDown, touchend: stopMoving, mousedown: startMovingDown, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+
+						<td><button title="Move Left" class="move-left" data-bind="event: { touchstart: startMovingLeft, touchend: stopMoving, mousedown: startMovingLeft, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+						<td><button title="Move Right" class="move-right" data-bind="event: { touchstart: startMovingRight, touchend: stopMoving, mousedown: startMovingRight, mouseout: stopMoving, mouseup: stopMoving }"></button></td>
+
+						<td><button title="Reset Position" class="reset" data-bind="click: resetPosition"></button></td>
+						<td><button title="Reset Image" class="reset-full" data-bind="click: resetFull"></button></td>
+					</tr>
+				</table>
+
+
+				<div data-bind="visible: $parents[1].settings['defaults.image-resize-warning.enabled']" id="image-resize-warning">Increasing or decreasing the size of your image may reduce quality</div>
+			</div>
+		</div>
+	</article>
+</div>
+<div id="colour-areas-container" style="display: none;" data-bind="visible: colourAreas.areasWithMultipleColours().length > 0">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Select Colour					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: colourAreas">
+			<div data-bind="visible: areasWithMultipleColours().length > 1">
+				<div class="styled-select">
+					<select data-bind="
+						value: selectedArea,
+
+
+						options: areasWithMultipleColours,
+												optionsText: function(item) { return item.name; }"></select>
+				</div>
+			</div>
+
+			<div data-bind="with: $parent.currentColourArea">
+				<div id="current-colour-area-container" data-bind="visible: colours().length > 1 && !v.extra.isColourAreaSpectrumEnabled()">
+										<div class="colour-panel" data-bind="foreach: colours">
+						<div class="colour-box" data-bind="style: {background: cssRGB}, click: $parent.selectedColour, attr: { 'alt': 'Colour', 'title': colour_name }">&#32;</div>
+					</div>
+									</div>
+
+				<div class="spectrum" data-bind="visible: v.extra.isColourAreaSpectrumEnabled">
+					<input type="text" data-bind="spectrum: selectedColour" />
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+<div id="effects-container" style="display: none;" data-bind="style: { display: effects.effects().length > 1 ? 'block' : 'none' }">
+	<article class="box expando">
+		<header >
+			<h1>
+				<a>
+					Add Effects					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: effects">
+			<div class="styled-select"><select data-bind="value: selectedEffect, options: effects, optionsText: function(item) { return item.name; }"></select></div>
+		</div>
+	</article>
+</div>
+<div id="attributes-container" style="display: none;" data-bind="visible: attributes.attributes().length > 0">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Attributes					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: attributes">
+			<div data-bind="foreach: attributes">
+				<span data-bind="text: name"></span>
+				<div class="styled-select"><select data-bind="value: selectedOption, valueAllowUnset: true, options: $parent.attributeOptions()[name], optionsText: 'name'"></select></div>
+			</div>
+		</div>
+	</article>
+</div>
+<div id="views-container" style="display: none;" data-bind="style: { display: productMeta.printSizes().length > 1 ? 'block' : 'none' }">
+	<article class="box expando">
+		<header>
+			<h1>
+				<a>
+					Size					<img class="expando-out" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-in.png" />
+					<img class="expando-in" src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/16x16/zoom-out.png" />
+				</a>
+			</h1>
+		</header>
+
+		<div class="expando-in" data-bind="with: productMeta">
+			<div class="styled-select"><select data-bind="value: selectedPrintSize, options: printSizes, optionsText: 'description'"></select></div>
+		</div>
+	</article>
+</div>
+
+
+
+						<article class="preview-tab box" data-bind="visible: extra.product().space_conversion_product, click: extra.previewPopup.open">
+				<header>
+					<h1>
+						<span>3D Preview</span>
+
+						<img src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/3d.png" />
+					</h1>
+				</header>
+			</article>
+
+
+									<article class="box" id="add-to-cart" data-bind="visible: extra.isAddToCartEnabled() && $root.productMeta.isAddToCartEnabled(), click: extra.addToCart">
+							<header>
+					<h1>
+						<span>Add to Cart</span>
+
+						<img src="//legacy.custom-gateway.net/ep/resource/app_layouts/acp3_2/images/emblem-ok-symbolic.svg" class="add-to-cart-icon" />
+					</h1>
+				</header>
+			</article>
+
+
+
+
+
+
+					</section>
+
+		<section id="page-content">
+			<div style="display: none;" class="drag-message" data-bind="visible: parameters.r == 'webgl'">
+				Drag with your mouse to rotate			</div>
+
+			<div id="renderer">
+				<div>
+					<div data-bind="foreach: extra.product().surfaceAreas">
+													<div class="layer-controls surface" data-type="surface" data-bind="attr: { 'data-id': id }">
+							</div>
+											</div>
+					<div data-bind="foreach: textAreas.areas">
+													<div class="layer-controls" data-type="text" data-bind="visible: allow_move, attr: { 'data-id': template_text_area_id }" data-direction-x="1" data-direction-y="1">
+								<div class="rotate-handle" data-angle-offset="-20" data-bind="visible: allow_rotate"></div>
+								<div class="resize-handle" data-direction-x="1" data-direction-y="1" data-bind="visible: !text_boundary_auto_fit && render_delegate == 0 && allow_resize == 1"></div>
+							</div>
+											</div>
+
+					<div data-bind="foreach: imageAreas.areas">
+													<div
+																data-bind="visible: allow_move || allow_rotate || allow_zoom || allow_input, attr: { 'data-id': template_image_area_id }"
+																class="layer-controls" data-type="image" data-direction-x="1" data-direction-y="1">
+								<div class="rotate-handle" data-angle-offset="-20" data-bind="visible: allow_rotate"></div>
+								<div class="resize-handle" data-bind="visible: allow_zoom && render_delegate == 0" data-direction-x="1" data-direction-y="1" data-lock-aspect-ratio="x"></div>
+							</div>
+											</div>
+				</div>
+
+				<canvas id="space-2d"></canvas>
+				<canvas id="space-3d"></canvas>
+			</div>
+
+			<article id="model-controls-container" data-bind="if: (parameters.r == 'flash' || parameters.r == 'webgl') && settings['defaults.no-ui.enabled'] == 0">
+				<div class="controls">
+					<button title="Zoom In" class="zoom-in" data-bind="event: { mousedown: model.startZoomingIn, mouseout: model.stopZooming, mouseup: model.stopZooming, touchstart: model.startZoomingIn, touchend: model.stopZooming }"></button>
+					<button title="Zoom Out" class="zoom-out" data-bind="event: { mousedown: model.startZoomingOut, mouseout: model.stopZooming, mouseup: model.stopZooming, touchstart: model.startZoomingOut, touchend: model.stopZooming }"></button>
+
+					<button title="Rotate Left" class="rotate-left" data-bind="event: { mousedown: model.startRotatingLeft, mouseout: model.stopRotating, mouseup: model.stopRotating, touchstart: model.startRotatingLeft, touchend: model.stopRotating }"></button>
+					<button title="Rotate Right" class="rotate-right" data-bind="event: { mousedown: model.startRotatingRight, mouseout: model.stopRotating, mouseup: model.stopRotating, touchstart: model.startRotatingRight, touchend: model.stopRotating }"></button>
+				</div>
+			</article>
+		</section>
+
+
+
+			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4950ec9d2d","applicationID":"29973153","transactionName":"MVFbbEtSVxZZVhdRXwgbeFtNWlYLF1QTSB8PWl1dQRxQC1xQGw==","queueTime":0,"applicationTime":25,"atts":"HRZYGgNIRBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
